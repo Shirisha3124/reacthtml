@@ -1,0 +1,162 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ </head>
+
+  <style>
+    i {
+      cursor: pointer;
+    }
+
+    .navbar {
+      background-color: grey;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    h1{
+      color: rgb(21, 7, 15);
+    }
+
+    .cart {
+      color: rgb(75, 3, 11);
+      font-size: 30px;
+      padding: 5px;
+    }
+
+    .cart-Amt {
+      font-size: 20px;
+      background-color: rgb(43, 226, 80);
+      position: absolute;
+      top: -12px;
+      right: 0;
+    }
+
+
+    .order {
+
+      display: grid;
+      grid-template-columns: repeat(2, 219px);
+      gap: 25px;
+      justify-content: center;
+      padding-bottom: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .order {
+        grid-template-columns: repeat(2, 219px);
+      }
+    }
+
+    @media (max-width: 300px) {
+      .order {
+        grid-template-columns: repeat(1, 219px);
+      }
+    }
+
+
+    .order-item {
+      border: 3px solid black;
+      border-radius: 2px;
+      padding: 5px 5px;
+      text-transform: capitalize;
+    }
+
+    .order-detail {
+      padding: 2px;
+    }
+
+    .order-price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      font-size: 16px;
+    }
+
+    .bi-dash {
+      color: red;
+    }
+
+    .bi-plus-lg {
+      color: greenyellow;
+    }
+    .text-center {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .HomeBtn,
+    .checkout,
+    .removeAll {
+      background-color: black;
+      color: white;
+      padding: 4px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 7px;
+
+    }
+    .checkout{
+      background-color: green;
+    }
+    .removeAll {
+      background-color: red;
+    }
+
+    .bi-x-lg{
+      color:red;
+      font-weight: bold;
+
+    }
+    .shopping-cart{
+      display: grid;
+      grid-template-columns: repeat(1, 219px);
+      justify-content: center;
+      gap: 10px;
+      
+    }
+    .cart-item {
+      border: 2px solid brown;
+      border-radius: 10px;
+      display: flex;
+      padding: 3px;
+      margin: 25px 0px 2px 2px;
+    }
+    .title-price-x {
+      align-items: top;
+      display: flex;
+      justify-content:space-between;
+      height: 70px;
+
+    }
+
+    .title-price {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cart-item-price {
+      background-color:black;
+      color: white;
+      border-radius: 4px;
+      padding: 2px 0px;
+   
+    }  
+  </style>
+</html>
