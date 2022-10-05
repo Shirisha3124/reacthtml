@@ -1,0 +1,42 @@
+
+#menu-services {
+
+    margin-top: 0px;
+    height: 5vh ;
+    }
+    
+    #menu-services h1{
+    text-transform: uppercase;
+    
+    color: rgb(27, 25, 25);
+    text-shadow: 0 0 3px #FF0000;
+    font-size: 45px;
+    }
+    
+         #Service-item {
+          display: grid;
+          grid-template-columns: repeat(2, 250px);
+          gap: 5%;
+          justify-content: center;
+          margin-bottom: 10px;
+         
+        }
+        .box { 
+          display: grid;
+          flex-wrap: wrap;
+         
+          padding-left: 80px;
+          padding-bottom: 2px;
+          width: 18%;
+       
+          justify-content: center;
+          gap: 5px;
+         
+        }
+        img {
+          box-sizing: border-box;
+          border: 6px solid red;
+        }
+        .box >p{
+          font-size: large;
+        }

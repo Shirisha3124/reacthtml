@@ -1,5 +1,8 @@
 import React from 'react';
 import {menu} from '../database/menu';
+import images8 from '../images/image8.jpg';
+import "./Cart.css";
+
 
 class Cart extends React.Component {
     constructor(props){
@@ -14,8 +17,8 @@ class Cart extends React.Component {
         const mycarts = menu
         const mycart = []
         mycarts.forEach((cart) => {
-            cart["amount"] = 100
-            cart["quantity"] = 1
+          
+            cart["quantity"] = 0
             mycart.push(cart)
         })
         const total = this.totalAmount(mycart)
@@ -46,7 +49,7 @@ class Cart extends React.Component {
     }
     totalAmount = (cart) => {
         const total = cart.reduce((a, b) => {
-            return a + b["amount"] * b["quantity"]
+            return a + b["price"] * b["quantity"]
         }, 0)
         return total
     }
@@ -54,21 +57,20 @@ class Cart extends React.Component {
         const { mycart,total } = this.state
         return (
             <div className='container'>
-                <h3>My Carts</h3>
                 <div className="row mt-5">
-                    <div className="col-md-6" style={{height:"558px",overflowY:"scroll"}}>
+                    <div className="col-sm-6" >
                         {
                             mycart.length !== 0 ? mycart.map((cart, index) => (
-                                <div className="card mb-3" style={{ maxWidth: 540 }} key={index}>
-                                    <div className="row g-0">
-                                        <div className="col-md-4">
-                                            <img src={cart.image} className="img-fluid rounded-start" alt={cart.title} />
+                                <div  key={index}>
+                                    <div className="row g-0" style={{paddingTop:"10%"}}>
+                                        <div className="col-sm-6" style={{paddingLeft:"10%"}}>
+                                            <img src={cart.img} width="250" height="250" />
                                         </div>
-                                        <div className="col-md-8">
+                                        <div className="col-sm-6" style={{paddingLeft:"10%"}}>
                                             <div className="card-body">
-                                                <h5 className="card-title">{cart.title}</h5>
-                                                <p>₹ {cart.amount}</p>
-                                                <label className="form-label">Quantity</label>
+                                                <h2 className="card-title" style={{fontSize:"20px"}}>{cart.name}</h2>
+                                                <p style={{fontSize:"24px"}}>${cart.price}</p>
+                                                <label className="form-label" style={{fontSize:"24px",paddingLeft:"1px"}} >Quantity</label>
                                                 <input className='form-control mb-3' type="text" value={cart.quantity} readOnly />
                                                 <button className='btn btn-info' style={{ marginRight: "5px" }} onClick={(e) => this.decrement(e, cart.id)} >-</button>
                                                 <button className='btn btn-info' onClick={(e) => this.increment(e, cart.id)} >+</button>
@@ -80,12 +82,12 @@ class Cart extends React.Component {
                         }
                     </div>
                     <div className="col-md-6">
-                        <div className="card mb-3" style={{ maxWidth: 540 }} >
+                        <div className="card mb-3" >
                             <div className="row g-0">
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title mb-3">Total ₹ {total} </h5>
-                                        <button className='btn btn-info' >Confirm Order</button>
+                                        <h1 className="card-title mb-3">Total $ {total} </h1>
+                                       
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,36 @@
+.container1{
+    background-color:beige ;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10%;
+    width: 100%;
+    margin: 3rem auto;
+    height: 500px;
+  }
+  .img_cont{
+    padding-top: 50px;
+    padding-left: 5px;
+    height: 250px;
+    float:left;
+    width: max-content;
+    margin:0px auto;
+  
+  }
+  .content {
+    padding-top: 3px;
+    text-align: center;
+  }
+  .content h2{
+    font-size: 60px;
+    color:rgb(158, 76, 229);
+    text-align: center;
+    padding-top: 1px;
+  
+  }
+  .content p{
+    padding-left: 20px;
+    color: black;
+    font-size:xx-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+  }
