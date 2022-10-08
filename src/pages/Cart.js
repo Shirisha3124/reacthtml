@@ -64,13 +64,15 @@ class Cart extends React.Component {
                                 <div  key={index}>
                                     <div className="row g-0" style={{paddingTop:"10%"}}>
                                         <div className="col-sm-6" style={{paddingLeft:"10%"}}>
-                                            <img src={cart.img} width="250" height="250" />
+                                            <img src={cart.img} width="150" height="150" />
                                         </div>
-                                        <div className="col-sm-6" style={{paddingLeft:"10%"}}>
+                                        <div class="col-sm-6">
+                                            </div>
+                                        <div className="col-sm-7" style={{paddingLeft:"10%"}}>
                                             <div className="card-body">
-                                                <h2 className="card-title" style={{fontSize:"20px"}}>{cart.name}</h2>
-                                                <p style={{fontSize:"24px"}}>${cart.price}</p>
-                                                <label className="form-label" style={{fontSize:"24px",paddingLeft:"1px"}} >Quantity</label>
+                                                <h2 className="card-title" style={{fontSize:"18px"}}>{cart.name}</h2>
+                                                <p style={{fontSize:"20px"}}>${cart.price}</p>
+                                                <label className="form-label" style={{fontSize:"20px",paddingLeft:"1px"}} >Quantity</label>
                                                 <input className='form-control mb-3' type="text" value={cart.quantity} readOnly />
                                                 <button className='btn btn-info' style={{ marginRight: "5px" }} onClick={(e) => this.decrement(e, cart.id)} >-</button>
                                                 <button className='btn btn-info' onClick={(e) => this.increment(e, cart.id)} >+</button>

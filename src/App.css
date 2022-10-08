@@ -78,18 +78,18 @@ nav {
   display: flex;
 }
 nav ul {
-  padding: 18px;
+  padding-left: 118px;
   list-style-type: none;
-  flex: 6;
-  display: flex;
+  flex: 30;
   color: blue;
- 
+  text-align: center;
 }
 nav li {
   display: inline;
   text-align: center;
-  flex: 2;
-  color: blue;   
+ 
+  color: blue;
+  padding: 15px;  
   
 }
 nav a,

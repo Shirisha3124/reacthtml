@@ -2,8 +2,50 @@
 
     box-sizing: border-box;
   }
+ .container {
+   display: grid;
+   flex-wrap: wrap;
+   padding-left: 190px;
+   justify-content: center;
+   margin-bottom: 15px;
+   grid-template-columns: repeat(2, 250px);
+   padding-top: 25px;
+   gap: 10px;
+ 
+ }  
+ .col-sm-6 {
+  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  justify-content: center;
+  float: left;
+  
+ }
+ /*.card-title {
+   font-size: 15px;
+   text-transform: uppercase;
 
+ }*/
+  p {
+    font-size: 20px;
+    display: grid;
+    flex: 10%;
+  }
   .img{
     padding-top:-15%;
+    display: grid;
+  }
+  .card-body {
+    display: block;
+    grid-template-columns: repeat(2, 250px); 
+    gap: 5%;
+    margin-bottom: 10px;    
+  }
+  #text {
+    font-size: 20px;
+    background-color: rgb(43, 226, 80);
+    position: absolute;
+    top: -12px;
+    right: 0;
   }
   
